@@ -1,0 +1,6 @@
+.vscode
+test
+*.log
+*.todo
+.git
+js
