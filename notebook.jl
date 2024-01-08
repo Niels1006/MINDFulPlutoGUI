@@ -681,16 +681,10 @@ MINDFulPlutoGUI.trigger_update_of_draw_cell(draw_button)
 
 
 # ╔═╡ daceb10a-f60c-4f4f-b2ac-ff8bf68f8c8a
-begin
-	fig = Figure()
-	ax = Axis(fig[1,1])
-	set_theme!(theme_black())
-	
-	fig
-end
+MINDFulPlutoGUI.intent_list
 
 # ╔═╡ 77b3716e-aac5-47f0-8618-253afc079b4b
-println("hello")
+"Hello world"
 
 # ╔═╡ Cell order:
 # ╠═247ea030-8bd4-11ee-1923-2914682ad01e
