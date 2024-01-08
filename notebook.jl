@@ -169,7 +169,6 @@ begin
         <!--html-->
         <select class="form-select intent-list btn btn-outline-light btn-lg node" aria-label="Position" id="wanted_pos_select">
         			<option selected>Position</option>
-        	<option>1</option>
         	<option>2</option>
         	<option>3</option>
         </select>
