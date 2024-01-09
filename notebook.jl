@@ -168,7 +168,7 @@ begin
         _wanted_pos = @bind wanted_pos html"""
         <!--html-->
         <select class="form-select intent-list btn btn-outline-light btn-lg node" aria-label="Position" id="wanted_pos_select">
-        			<option selected>Position</option>
+        	<option selected>Position</option>
         	<option>2</option>
         	<option>3</option>
         </select>
@@ -191,14 +191,14 @@ begin
      <div class=" d-flex main-card">
          <div class="left-wrapper">
              <div class="top-desc d-flex align-items-center">
-                 <span class="container-fluid align-middle">MINDFulMakie.jl GUI v0.1</span>
+                 <span class="container-fluid title-span justify-content-center align-items-center input-group-text no-border">MINDFulPlutoGUI v0.1</span>
              </div>
 
 
              <div class="menu-bar">
                  <div class="container">
                      <div class="row menu-buttons">
-                         <button class="btn btn-outline-light btn-lg create-intent" onclick="
+                         <button class="btn btn-outline-light btn-lg create-intent text-nowrap" onclick="
 
                         //show all cards 
                         document.querySelectorAll('.card').forEach((card, i) => {
@@ -284,12 +284,12 @@ begin
                          </button>
                      </div>
                      <div class="row menu-buttons">
-                         <button class="btn btn-outline-light btn-lg create-intent">
+                         <button class="btn btn-outline-light btn-lg create-intent text-nowrap">
                              Topology settings
                          </button>
                     </div>
                     <div class="row menu-buttons">
-                        <button class="btn btn-outline-light btn-lg create-intent" onclick="
+                        <button class="btn btn-outline-light btn-lg create-intent text-nowrap" onclick="
 
                             //hide all cards 
                             document.querySelectorAll('.card').forEach((card, i) => {
@@ -366,12 +366,12 @@ begin
                         </button>
                      </div>
                      <div class="row menu-buttons">
-                         <button class="btn btn-outline-light btn-lg create-intent">
+                         <button class="btn btn-outline-light btn-lg create-intent text-nowrap">
                              Alternative GUI?
                          </button>
                      </div>
                      <div class="row menu-buttons settings">
-                         <button class="btn btn-outline-light btn-lg create-intent">
+                         <button class="btn btn-outline-light btn-lg create-intent text-nowrap">
                              Dashboard settings
                          </button>
                      </div>
@@ -383,7 +383,7 @@ begin
 
          <div class="container-fluid content">
 
-             <div class="row gx-5">
+             <div class="row flex-nowrap">
                  <div class="col">
 
                      <div class="card">
@@ -392,7 +392,7 @@ begin
                          </div>
                          <div class="card-body">
 
-                             <div class="row">
+                             <div class="row flex-nowrap">
                                  <div class="col d-flex justify-content-center">
                                     $(embed_display(_n1_sn))
                                  </div>
@@ -400,7 +400,7 @@ begin
                                     $(embed_display(_n1_btn))
                                  </div>
                              </div>
-                             <div class="row">
+                             <div class="row flex-nowrap">
                                  <div class="col d-flex justify-content-center">
                                     $(embed_display(_n2_sn))
                                  </div>
@@ -408,7 +408,7 @@ begin
                                     $(embed_display(_n2_btn))
                                  </div>
                              </div>
-                             <div class="row">
+                             <div class="row flex-nowrap">
                                  <div class="col d-flex justify-content-center">
                                     $(embed_display(create_intent_bind))
                                  </div>
@@ -429,7 +429,7 @@ begin
                          </div>
                          <div class="card-body">
 
-                             <div class="row">
+                             <div class="row flex-nowrap">
                                  <div class="col d-flex justify-content-center">
                                      <select class="form-select btn btn-outline-light btn-lg node" aria-label="Node 1">
                                          <option selected>Comp algo</option>
@@ -444,7 +444,7 @@ begin
                                      </button>
                                  </div>
                              </div>
-                             <div class="row">
+                             <div class="row flex-nowrap">
                                  <div class="col d-flex justify-content-center">
                                     $(embed_display(compile_button_bind))
                                  </div>
@@ -452,7 +452,7 @@ begin
                                     $(embed_display(uncompile_button_bind))
                                  </div>
                              </div>
-                             <div class="row">
+                             <div class="row flex-nowrap">
                                  <div class="col d-flex justify-content-center">
                                     $(embed_display(install_button_bind))
                                  </div>
@@ -473,7 +473,7 @@ begin
                          </div>
                          <div class="card-body">
 
-                             <div class="row">
+                             <div class="row flex-nowrap">
                                  <div class="col d-flex justify-content-center">
                                     $(embed_display(_intent_selection))
                                  </div>
@@ -481,7 +481,7 @@ begin
                                     $(embed_display(draw_button_bind))
                                  </div>
                              </div>
-                             <div class="row">
+                             <div class="row flex-nowrap">
                                  <div class="col d-flex justify-content-center">
                                     $(embed_display(plot_selection_bind))
                                  </div>
@@ -491,7 +491,7 @@ begin
                                      </button>
                                  </div>
                              </div>
-                             <div class="row">
+                             <div class="row flex-nowrap">
                                  <div class="col d-flex justify-content-center">
                                     $(embed_display(_wanted_pos))
                                  </div>
@@ -567,10 +567,11 @@ begin
         
         .menu-buttons {
             padding: 0vh 0 2vh 0;
+            height: 5vh;
         }
         
         .settings {
-            margin-top: 49.5vh;
+            margin-top: 52vh;
         }
         
         .content {
@@ -595,11 +596,20 @@ begin
             max-width: 10vw;
             margin: 1vh 0vw 0 0;
             width: 10vw;
+            min-width: 4vw;
         }
         
         .create-intent {
             width: 10vw;
             min-width: 5vw;
+        }
+
+        .title-span {
+            font-weight: bold;
+            font-size: 16px;
+            color: white;
+            background: transparent;
+            border: none;
         }
         
         /*.div-creating {*/
